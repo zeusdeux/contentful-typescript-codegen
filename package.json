@@ -1,13 +1,16 @@
 {
-  "name": "contentful-typescript-codegen",
+  "name": "@zeusdeux/contentful-typescript-codegen",
   "description": "Generate TypeScript types from your Contentful environment.",
   "license": "MIT",
   "author": "Steven Petryk <steven.petryk@intercom.io>",
+  "contributors": [
+    "Mudit Ameta <zeusdeux@gmail.com?"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/intercom/contentful-typescript-codegen"
+    "url": "https://github.com/zeusdeux/contentful-typescript-codegen"
   },
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "main": "dist/contentful-typescript-codegen.js",
   "bin": "./dist/contentful-typescript-codegen.js",
   "files": [
@@ -16,7 +19,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts && chmod +x dist/contentful-typescript-codegen.js",
-    "prepare": "npm run build",
+    "prepack": "npm run build",
     "commit": "git-cz",
     "format": "prettier --write \"**/*.ts\"",
     "format:check": "npm run format -- --check",
