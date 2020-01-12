@@ -13,8 +13,8 @@ import renderObject from "./fields/renderObject"
 import renderRichText from "./fields/renderRichText"
 import renderSymbol from "./fields/renderSymbol"
 
-export default function renderContentType(contentType: ContentType): string {
-  const name = renderContentTypeId(contentType.sys.id)
+export default function renderContentType(contentType: ContentType, prefix?: string): string {
+  const name = renderContentTypeId(contentType.sys.id, prefix)
   const fields = renderContentTypeFields(contentType.fields)
   const sys = renderSys(contentType.sys)
 

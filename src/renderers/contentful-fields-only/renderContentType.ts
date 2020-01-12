@@ -14,8 +14,8 @@ import renderNumber from "../contentful/fields/renderNumber"
 import renderObject from "../contentful/fields/renderObject"
 import renderSymbol from "../contentful/fields/renderSymbol"
 
-export default function renderContentType(contentType: ContentType): string {
-  const name = renderContentTypeId(contentType.sys.id)
+export default function renderContentType(contentType: ContentType, prefix?: string): string {
+  const name = renderContentTypeId(contentType.sys.id, prefix)
   const fields = renderContentTypeFields(contentType.fields)
 
   return renderInterface({
