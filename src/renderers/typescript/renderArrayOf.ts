@@ -1,3 +1,3 @@
 export default function renderArrayOf(source: string) {
-  return `(${source})[]`
+  return `Array<${source}>`
 }
