@@ -120,6 +120,8 @@ runCodegen(cli.flags.output).catch(error => {
   process.exit(1)
 })
 
+// TODO: Fix this shit polling logic. WTF even smh
+
 if (cli.flags.poll) {
   const intervalInSeconds = parseInt(cli.flags.interval, 10)
 
